@@ -1,24 +1,18 @@
-import 'package:ass3/screens/home/home.dart';
-import 'package:ass3/screens/profile/widgets/forgotpass.dart';
 import 'package:flutter/material.dart';
 
-import '../../../profile/profile.dart';
-import '../../../profile/widgets/signup.dart';
+import '../profile.dart';
+import '../profile2.dart';
 
-class AcctMain extends StatefulWidget {
-  @override
-  _AcctMain createState() => _AcctMain();
-}
+class SignUp extends StatelessWidget {
+  const SignUp({Key? key}) : super(key: key);
 
-class _AcctMain extends State<AcctMain> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          title: Text("Login Page"),
-          automaticallyImplyLeading: false,
+          title: Text("Create Account"),
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -28,7 +22,27 @@ class _AcctMain extends State<AcctMain> {
               ),
               Padding(
                 //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
-                padding: EdgeInsets.symmetric(horizontal: 15),
+                padding: EdgeInsets.all(15.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'First Name',
+                      hintText: 'First Name'),
+                ),
+              ),
+              Padding(
+                //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
+                padding: EdgeInsets.all(15.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Last Name',
+                      hintText: 'Last Name'),
+                ),
+              ),
+              Padding(
+                //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
+                padding: EdgeInsets.all(15.0),
                 child: TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -49,7 +63,7 @@ class _AcctMain extends State<AcctMain> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(50),
                 child: Container(
                   height: 50,
                   width: 250,
@@ -59,41 +73,17 @@ class _AcctMain extends State<AcctMain> {
                   child: TextButton(
                     onPressed: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (_) => HarperProfile()));
+                          MaterialPageRoute(builder: (_) => SignupProfile()));
                     },
                     child: Text(
-                      'Login',
+                      'Create Account',
                       style: TextStyle(color: Colors.white, fontSize: 25),
                     ),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => ForgotPass()));
-                  },
-                  child: Text(
-                    'Forgot Password',
-                  ),
-                ),
-              ),
               SizedBox(
                 height: 130,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (_) => SignUp()));
-                  },
-                  child: Text(
-                    'Create Account',
-                  ),
-                ),
               ),
             ],
           ),

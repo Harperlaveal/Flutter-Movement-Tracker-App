@@ -20,7 +20,6 @@ class BottomNavBar extends StatelessWidget {
                 },
                 child: Icon(Icons.account_circle),
               ),
-              Icon(Icons.search),
               Transform.translate(
                 offset: Offset(0, -12),
                 child: GestureDetector(
@@ -38,12 +37,12 @@ class BottomNavBar extends StatelessWidget {
                       child: Icon(Icons.home)),
                 ),
               ),
-              Icon(Icons.date_range),
               GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).pushNamed('/details');
-                  },
-                  child: Icon(Icons.settings)),
+                onTap: () {
+                  Navigator.of(context).pushNamed('/details');
+                },
+                child: Icon(Icons.date_range),
+              ),
             ],
           ),
         ));

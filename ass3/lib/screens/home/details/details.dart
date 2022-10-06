@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../../widgets/bottom_nav.dart';
-import 'widgets/Info.dart';
+import 'widgets/appbar.dart';
 import 'widgets/dates.dart';
 import 'widgets/graph.dart';
-import 'widgets/stats.dart';
 import 'widgets/steps.dart';
 
 class DetailsPage extends StatelessWidget {
@@ -13,12 +12,11 @@ class DetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: MainAppBar(appBar: AppBar()),
       body: Column(children: [
         Dates(),
         Steps(),
         Graph(),
-        Info(),
-        Stats(),
         BottomNavBar(),
       ]),
     );
