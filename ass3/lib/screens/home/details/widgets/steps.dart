@@ -2,13 +2,14 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+//This class prints the weekly steps above the graph.
 class Steps extends StatelessWidget {
   const Steps({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Random rand = Random();
-    int randomNum = rand.nextInt(30000) + 15000;
+    //Random rand = Random();
+    int steps = 44663;
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Column(
@@ -21,7 +22,7 @@ class Steps extends StatelessWidget {
             ),
           ),
           Text(
-            randomNum.toString(),
+            steps.toString(),
             style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.w500,

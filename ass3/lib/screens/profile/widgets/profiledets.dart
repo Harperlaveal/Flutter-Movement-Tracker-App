@@ -19,6 +19,7 @@ class ProfileDets extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
+                //This was the generic circle on the profile page.
                 CircleAvatar(
                   backgroundColor: Colors.white70,
                   minRadius: 60.0,
@@ -31,6 +32,7 @@ class ProfileDets extends StatelessWidget {
               ],
             ),
             Text(
+              //Profile name
               'Harper Doak',
               style: TextStyle(
                 fontSize: 35,
@@ -45,7 +47,7 @@ class ProfileDets extends StatelessWidget {
               height: 50,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text('Steps done today: 8202',
+                child: Text('Steps done today: 10317',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.normal,

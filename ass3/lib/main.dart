@@ -22,11 +22,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => HomePage(),
-        '/details': (context) => DetailsPage(), //Setting page
-        '/account': (context) => Account(),
+        '/': (context) => HomePage(), //Openging page
+        '/details': (context) => DetailsPage(), //Graph Page
+        '/account': (context) => Account(), //Account Page
       },
-      initialRoute: '/',
+      initialRoute: '/', // This just sets the intial page.
     );
   }
 }

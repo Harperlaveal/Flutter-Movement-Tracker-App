@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../helpers.dart';
 
+//This class was used for getting the date boxes printing at the top of the graph.
 class Dates extends StatelessWidget {
   const Dates({Key? key}) : super(key: key);
 
@@ -10,10 +11,12 @@ class Dates extends StatelessWidget {
     List<DateBox> dateBoxes = [];
 
     DateTime date = DateTime.now().subtract(Duration(days: 3));
+    //Loop to print all 7 dates boxes for 7 days of the week.
     for (int i = 0; i < 7; i++) {
       dateBoxes.add(DateBox(date: date, active: i == 3));
       date = date.add(Duration(days: 1));
     }
+    //Set a specifc padding for each DateBox
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Row(
@@ -25,6 +28,7 @@ class Dates extends StatelessWidget {
 }
 
 class DateBox extends StatelessWidget {
+  //Active bool is too ensure that the current day is highlighted blue.
   final bool active;
   final DateTime date;
 
@@ -36,6 +40,7 @@ class DateBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //Below is the container and the style of what is inside the DateBoxes.
     return Container(
       width: 50,
       height: 70,

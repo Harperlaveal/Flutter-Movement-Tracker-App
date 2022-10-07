@@ -17,6 +17,7 @@ class Activity extends StatefulWidget {
 }
 
 class _MyAppState extends State<Activity> {
+  //Stepcount stream. This is automatically reset every day.
   late Stream<StepCount> _stepCountStream;
   late Stream<PedestrianStatus> _pedestrianStatusStream;
   String _status = '?', _steps = '?';
@@ -27,6 +28,7 @@ class _MyAppState extends State<Activity> {
     initPlatformState();
   }
 
+//Function below calculates step using the pedometer
   void onStepCount(StepCount event) {
     print(event);
     setState(() {
@@ -95,6 +97,7 @@ class _MyAppState extends State<Activity> {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
+              //Code below changes the icons depending the status of movement.
               child: Icon(
                 _status == 'walking'
                     ? Icons.directions_walk
