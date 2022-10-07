@@ -1,4 +1,4 @@
-# ass3
+# Assignment 3 - Flutter App
 
 ## Setting up the development enviroment
 
